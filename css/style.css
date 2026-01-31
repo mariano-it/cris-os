@@ -1,0 +1,936 @@
+:root {
+
+  --card-emotion-bg: #ffffff;
+  --card-emotion-title: #3f3f43;
+  --card-emotion-text: #3a3a3c;
+  --card-emotion-muted: #6e6e73;
+
+  --bg: #0f172a;
+  --card: #1d2a45;
+  --accent: #38bdf8;
+  --accent-soft: #7dd3fc;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+}
+
+body[data-theme="soft"] {
+   
+  --card-emotion-bg: #f7d8e4;
+  --card-emotion-title: #b3366a;
+  --card-emotion-text: #5a2a3c;
+  --card-emotion-muted: #7a4a5c;
+
+     --bg: #f2e5e9;
+    --card: #efcbd0;
+     --accent: #f472b6;
+     --accent-soft: #f9a8d4;
+     --text: #4a044e;
+     --muted: #9d174d;
+}
+
+body {
+  background: linear-gradient(135deg, var(--bg), var(--card));
+  color: var(--text);
+  min-height: 100vh;
+
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+
+    margin: 0;
+    background: linear-gradient(135deg, var(--bg), var(--card));
+    color: var(--text);
+min-height: 100vh;
+}
+
+/* Contenedor */
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+}
+
+/* Tarjetas */
+section {
+    background: var(--card);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 1.5rem;
+    animation: fadeUp 0.5s ease;
+}
+
+
+/* Titulos */
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--accent-soft);
+}
+
+/* Inputs */
+input, select {
+    background: #020617;
+    border: 1px solid #1e293b;
+    color: var(--text);
+    padding: 0.6rem 0.8rem;
+    border-radius: 12px;
+    outline: none;
+}
+
+/* Botones */
+button {
+    background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+    border: none;
+    border-radius: 14px;
+    padding: 0.5rem 0.9rem;
+    color: #020617;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0.8 20px rgba(56, 189, 248, 0.4);
+}
+
+section {
+  animation: iosFade 0.35s ease;
+}
+
+@keyframes iosFade {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* listas, creo */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: color-mix(in srgb, var(--card) 85%, transparent);
+    border-radius: 14px;
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: fadeUp 0.4s ease;
+}
+
+/* ios chaifon */
+.app {
+  max-width: 420px;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, var(--bg), var(--card));
+ /* celular */
+  margin: auto;
+}
+
+.app-header {
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(20px);
+    background: color-mix(in srgb, var(--card) 80%, transparent);
+    padding: 1rem 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.app-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+   letter-spacing: 0.05em;
+}
+
+.app-content {
+    flex: 1;
+    padding: 1rem;
+}
+
+.app-nav {
+    position: sticky;
+    bottom: 0;
+ backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: space-around;
+    padding: 0.6rem 0;
+}
+
+.app-nav button {
+    background: none;
+    font-size: 1.3rem;
+    color: var(--muted);
+}
+
+.app-nav button:hover {
+    color: var(--accent);
+}
+
+body, section, header, nav {
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+
+
+@media (min-width: 900px) {
+  .app {
+    max-width: 900px; /* laptop */
+    border-radius: 24px;
+  }
+}
+
+/* prueba */
+
+
+/* modo twice */
+body[data-theme="soft"] .card {
+  background: #fff5f9;
+}
+
+body[data-theme="soft"] #saludo {
+  color: #b3366a;
+}
+
+body[data-theme="soft"] #frase {
+  color: #5a2a3c;
+}
+
+body[data-theme="soft"] #subfrase {
+  color: #7a4a5c;
+}
+
+/* La mayab vamos leones uga uga */
+.uni-card.mini {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(8px);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+.uni-left {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.uni-icon {
+  font-size: 1.4rem;
+}
+
+.uni-card h3 {
+  font-size: 0.95rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.uni-card p {
+  font-size: 0.8rem;
+  margin: 2px 0 0;
+  color: var(--muted);
+}
+
+.chevron {
+  font-size: 1.4rem;
+  opacity: 0.4;
+}
+
+.uni-card.mini:active {
+  transform: scale(0.97);
+  transition: 0.1s;
+}
+
+/* Boton con logo Anahuac */
+.nav-logo img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  filter: brightness(0.9);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.app-nav button:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* intento nueva interfas pt1 */
+.inicio-card,
+.memories-card,
+.resumen-card,
+.widget-card {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  animation: iosFade 0.4s ease;
+}
+
+/* Fotos */
+.memories-card img {
+  width: 100%;
+  border-radius: 16x;
+  object-fit: cover;
+}
+
+/* Resumen */
+.resumen-card li {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* Widget */
+.widget-tittle {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.1;
+}
+
+.widget-text {
+  font-size: 1rem;
+  margin-top: 0.4;
+}
+
+/* GALERÍA TIPO INSTAGRAM */
+.insta-gallery {
+  overflow: hidden;
+  width: 100%;
+}
+
+.insta-track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  animation: slide 30s linear infinite;
+}
+
+.insta-card {
+  min-width: 160px;
+  height: 160px;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.insta-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.insta-card span {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  font-size: 0.85rem;
+  color: white;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
+  padding: 6px 10px;
+  border-radius: 12px;
+}
+
+.insta-card:hover img {
+  transform: scale(1.08);
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.insta-gallery:hover .insta-track {
+  animation-play-state: paused;
+}
+
+@media (max-width: 480px) {
+  .insta-card {
+    min-width: 140px;
+    height: 180px;
+  }
+
+  .insta-card img {
+    object-fit: cover;
+  }
+}
+
+.insta-track {
+  will-change: transform;
+}
+
+@media (max-width: 480px) {
+  .insta-gallery {
+    padding: 0;
+    margin: 0;
+  }
+
+  .insta-track {
+    gap: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .insta-card {
+    min-width: 75vw;   /* 75% del ancho del celular */
+    height: 240px;
+    border-radius: 18px;
+  }
+}
+@media (max-width: 480px) {
+  .insta-card p {
+    font-size: 0.95rem;
+  }
+}
+.carousel {
+  max-height: 220px;
+  overflow: hidden;
+}
+.carousel img {
+  border-radius: 12px;
+}
+
+/* app */
+@media (max-width: 480px) {
+  .app {
+    padding: 12px;
+  }
+
+  .insta-card {
+    min-width: 80vw;
+    height: 260px;
+  }
+}
+
+/* medidas */
+
+/* 1️⃣ Mobile (iPhone / Samsung) */
+@media (max-width: 480px) {}
+
+/* 2️⃣ Tablet vertical (iPad) */
+@media (min-width: 481px) and (max-width: 1024px) {}
+
+/* 3️⃣ Tablet horizontal / laptop pequeña */
+@media (min-width: 1025px) and (max-width: 1280px) {}
+
+/* 4️⃣ Laptop grande */
+@media (min-width: 1281px) {}
+
+.app {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/*Reloj*/
+.reloj {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+}
+
+#hora {
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+#ampm {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.reloj-sub {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+ /**/
+
+ .reloj-card {
+  display: inline-block;
+  padding: 14px 20px;
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.02)
+  );
+  backdrop-filter: blur(18px);
+  box-shadow: 
+    0 10px 30px rgba(0,0,0,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+  margin-bottom: 20px;
+  animation: relojBreath 6s ease-in-out infinite;
+}
+
+/* respiración sutil */
+@keyframes relojBreath {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* casillero */
+
+.casillero-btn {
+  width: 100%;
+  padding: 16px;
+  margin: 10px 0;
+  border-radius: 18px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.casillero-btn:hover {
+  background: rgba(255,255,255,0.15);
+  transform: scale(1.02);
+}
+
+/* Pdf calendario MAYAB */
+
+.pdf-container {
+  width: 100%;
+  height: 75vh;
+  margin-top: 1rem;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #000;
+}
+
+.pdf-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Horario */
+.horario-card {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.horario-card h3 {
+  margin: 0 0 0 0 0.4rem;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.horario-card p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* almacenmaineto */
+
+.storage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.storage-card {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.storage-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.storage-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.storage-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.storage-card p {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.storage-card.soft {
+  background: linear-gradient(
+    135deg,
+    var(--accent),
+    var(--accent-soft)
+  );
+  color: #020617;
+}
+
+.storage-card.soft p {
+  color: #020617;
+}
+
+/* Almacenamiento */
+
+.galeria {
+  padding: 16px;
+}
+
+.galeria-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.upload-btn {
+  background: #111;
+  color: white;
+  font-size: 22px;
+  padding: 6px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.galeria-grid img,
+.galeria-grid video {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* boton de borrar */
+.delete-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 4px 6px;
+  cursor: pointer;
+}
+
+/* viwear */
+.viewer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.viewer img,
+.viewer video {
+  max-width: 95%;
+  max-height: 95%;
+  border-radius: 12px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Viwear */
+
+#viewer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#viewerContent img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+#viewerContent video {
+  width: 100%;
+  height: 100%;
+}
+
+/* cerrar viwear */
+
+.cerrar-viewer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* */
+
+.apps-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.app-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 14px;
+  background: var(--card);
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.app-card:hover {
+  transform: scale(1.02);
+  background: var(--card-hover);
+}
+
+.app-icon {
+  font-size: 1.8rem;
+}
+
+.app-card h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.app-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* Aura 
+.aura-chat {
+  height: 60vh;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.aura-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.aura-input input {
+  flex: 1;
+  padding: 0.6rem;
+}*/
+
+
+/* Tarea */
+
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.05);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  backdrop-filter: blur(6px);
+}
+
+.task-left {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.task-left input {
+  width: 18px;
+  height: 18px;
+  accent-color: #8b5cf6;
+}
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-title {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.task-meta {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.task-delete {
+  border: none;
+  background: none;
+  font-size: 20px;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.task-delete:hover {
+  opacity: 1;
+}
+
+/* Tareas */
+
+.tareas-inputs {
+  display: grid;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.tareas-inputs input,
+.tareas-inputs select,
+.tareas-inputs button {
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: none;
+  font-family: Inter;
+}
+
+.tareas-inputs button {
+  background: #767092;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.task-card {
+  background: rgba(255,255,255,0.08);
+  padding: 0.8rem;
+  border-radius: 14px;
+  margin-bottom: 0.6rem;
+}
+
+.task-left {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.task-meta {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+/* MUSIC BAR */
+.music-bar {
+  height: 24px;
+  display: flex;
+  gap: 4px;
+}
+
+.music-bar span {
+  width: 4px;
+  background: #ffb6d5;
+  border-radius: 4px;
+  animation: bounce 1s infinite ease-in-out;
+}
+
+.music-bar.paused span {
+  animation-play-state: paused;
+  opacity: 0.3;
+}
+
+@keyframes bounce {
+  0%, 100% { height: 6px; }
+  50% { height: 22px; }
+}
+
+/* nav */
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  .main-content {
+  padding-bottom: 70px;
+}
+
+}
+
+/* header */
+.header-text {
+  margin-bottom: 12px;
+}
+
+.main-content {
+  padding-bottom: 70px;
+}

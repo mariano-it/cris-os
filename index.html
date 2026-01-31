@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONCE OS</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+<div class="app">
+
+  <header class="app-header">
+    <h1>ONCE OS</h1>
+<div class="reloj-card">
+  <div class="reloj">
+    <span id="hora"></span>
+    <span id="ampm"></span>
+  </div>
+</div>
+    <button id="themeToggle">🩷</button>
+  </header>
+
+  <main class="app-content">
+
+<section id="inicio">
+
+  <!-- Tarjeta emocional -->
+  <div class="inicio-card">
+    <p class="saludo" id="saludo"></p>
+    <h2 class="frase" id="frase"></h2>
+    <p class="subfrase" id="subfrase"></p>
+  </div>
+
+<div class="insta-gallery">
+  <div class="insta-track">
+    
+    <!-- SET ORIGINAL -->
+    <div class="insta-card"><img src="./assets/US/us-call.jpeg"><span>Ese día 💗</span></div>
+    <div class="insta-card"><img src="./assets/US/15 -años.jpeg"><span>Siempre te ves como princesa 👑</span></div>
+    <div class="insta-card"><img src="./assets/US/busy-woman.jpeg"><span>My Busy Girl ❤️</span></div>
+    <div class="insta-card"><img src="./assets/US/formula-1.jpeg"><span>MI piloto favorito 🩷</span></div>
+    <div class="insta-card"><img src="./assets/US/la-luna.jpeg"><span>🌙</span></div>
+    <div class="insta-card"><img src="./assets/US/ropa-nueva.jpeg"><span>Mi modelo Fav 🩷❤️</span></div>
+    <div class="insta-card"><img src="./assets/US/ojos-novia.jpeg"><span>Tus ojos que ilumina mi alma 👀💞</span></div>
+
+    <!-- COPIA EXACTA -->
+       <div class="insta-card"><img src="./assets/US/us-call.jpeg"><span>Ese día 💗</span></div>
+    <div class="insta-card"><img src="./assets/US/15 -años.jpeg"><span>Siempre te ves como princesa 👑</span></div>
+    <div class="insta-card"><img src="./assets/US/busy-woman.jpeg"><span>My Busy Girl ❤️</span></div>
+    <div class="insta-card"><img src="./assets/US/formula-1.jpeg"><span>MI piloto favorito 🩷</span></div>
+    <div class="insta-card"><img src="./assets/US/la-luna.jpeg"><span>🌙</span></div>
+    <div class="insta-card"><img src="./assets/US/ropa-nueva.jpeg"><span>Mi modelo Fav 🩷❤️</span></div>
+    <div class="insta-card"><img src="./assets/US/ojos-novia.jpeg"><span>Tus ojos que ilumina mi alma 👀💞</span></div>
+  </div>
+</div>
+
+  <!-- Resumen -->
+  <div class="resumen-card">
+    <ul>
+      <li id="resApuntes"></li>
+      <li id="resTareas"></li>
+    </ul>
+  </div>
+
+  <!-- Widget vivo -->
+  <div class="widget-card">
+    <p class="widget-title">¿Que es Once Os?</p>
+    <p class="widget-text">Un proyecto echo exclusivamete para mi novia 👑❤️</p>
+  </div>
+</section>
+
+      <!-- Universidad code -->
+<section id="universidad" style="display:none;">
+  <h2>Universidad</h2>
+
+  <div class="uni-card mini">
+    <div class="uni-left">
+      <span class="uni-icon">🩷</span>
+      <div>
+        <h3>Todo en un mismo lugar</h3>
+        <p>Tú diseñas, yo programo 💫</p>
+      </div>
+    </div>
+  </div>
+
+<div class="uni-card mini" data-section="casillero">
+  <div class="uni-left">
+    <span class="uni-icon">📚</span>
+    <div>
+      <h3>Casillero Virtual</h3>
+      <p>Clases y materiales</p>
+    </div>
+  </div>
+  <span class="chevron">›</span>
+</div>
+
+<button class="casillero-btn uni-card mini"
+        data-link="https://outlook.office.com/mail/0/?deeplink=mail%2F0%2F">
+  <div class="uni-left">
+    <span class="uni-icon">✉️</span>
+    <div>
+      <h3>Correo Anahuac</h3>
+      <p>Avisos Importantes</p>
+    </div>
+  </div>
+  <span class="chevron">›</span>
+</button>
+
+<div class="uni-card mini" data-section="calendario">
+  <div class="uni-left">
+    <span class="uni-icon">📆</span>
+    <div>
+      <h3>Calendario</h3>
+      <p>Fechas clave del semestre</p>
+    </div>
+  </div>
+  <span class="chevron">›</span>
+</div>
+</section>
+
+<section id="calendario" style="display: none;">
+    <h2>Calendario acadmico</h2>
+  <div class="pdf-container">
+    <iframe
+    src="assets/calendarionovia.pdf"
+    title="Calendario Anahuac"
+    frameborder="0">
+  </iframe>
+  </div>
+</section>
+
+<section id="almacenamiento" style="display:none">
+  <h2>Mis cosas</h2>
+
+  <div class="storage-grid">
+
+<div class="storage-card soft" data-section="apps">
+  <span class="storage-icon">🌐</span>
+  <h3>Social Media</h3>
+  <p>lo que usas todos los días, todo pensando en ti 🌺</p>
+</div>
+
+    <div class="storage-card">
+      <span class="storage-icon">🎒</sapn>
+      <h3>Trabajos</h3>
+      <p>la chamba del semestre</p>
+    </div>
+
+    <div class="storage-card" data-type="fotos">
+      <span class="storage-icon">📸</span>
+      <h3>Fotos</h3>
+      <p>Tu scrabBook</p>
+    </div>
+
+    <div class="storage-card" data-type="videos">
+      <span class="storage-icon">📼</span>
+      <h3>Videos</h3>
+      <p>Algun vlog que hagas cielito</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="apps" style="display:none;">
+  <h2>Apps diarias</h2>
+
+  <div class="apps-grid">
+
+    <div class="app-card" onclick="window.open('https://open.spotify.com', '_blank')">
+      <span class="app-icon">🎧</span>
+      <div>
+        <h3>Spotify</h3>
+        <p>Música para tu día</p>
+      </div>
+    </div>
+
+    <div class="app-card" onclick="window.open('https://www.youtube.com', '_blank')">
+      <span class="app-icon">▶️</span>
+      <div>
+        <h3>YouTube</h3>
+        <p>Videos, clases, inspiración</p>
+      </div>
+    </div>
+
+    <div class="app-card" onclick="window.open('https://www.pinterest.com', '_blank')">
+      <span class="app-icon">📌</span>
+      <div>
+        <h3>Pinterest</h3>
+        <p>Ideas y estética</p>
+      </div>
+    </div>
+
+    <div class="app-card" onclick="window.open('https://web.whatsapp.com', '_blank')">
+      <span class="app-icon">💬</span>
+      <div>
+        <h3>WhatsApp Web</h3>
+        <p>Mensajes importantes</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="galeriaFotos" class="almacenamiento" style="display:none;">
+  <div class="galeria-header">
+    <h2>Fotos</h2>
+    <label class="upload-btn">
+      +
+      <input type="file" accept="image/*" multiple hidden id="inputFotos">
+    </label>
+  </div>
+
+  <div class="galeria-grid" id="gridFotos"></div>
+</section>
+
+<section id="galeriaVideos" class="galeria" style="display:none;">
+  <div class="galeria-header">
+    <h2>Videos</h2>
+    <label class="upload-btn">
+      +
+      <input type="file" accept="video/*" multiple hidden id="inputVideos">
+    </label>
+  </div>
+
+  <div class="galeria-grid" id="gridVideos"></div>
+</section>
+
+
+<section id="casillero" style="display:none;">
+  <h2>Casillero Virtual</h2>
+
+  <div class="uni-card">
+    <button class="casillero-btn" data-link="https://www.miplana.mx/a/acceso.html">
+      📚 Mi plan A 
+    </button>
+
+    <button class="casillero-btn" data-link="https://siu.anahuacmayab.mx/">
+      🗂️ Siu 
+    </button>
+
+        <button class="casillero-btn" data-link="https://anahuac.brightspace.com/d2l/home">
+      📖 BrightSpace
+    </button>
+
+        <button class="casillero-btn" data-link="https://conector-brightspace.redanahuac.mx/">
+      ⏹️ Cerrar sesiones BrightSpace
+    </button>
+  </div>
+
+</section>
+
+        <!--Horario code-->
+    <section id="horario" style="display:none;">
+      <h2>Horario Semanal</h2>
+      <p style="opacity: 0.7; font-size: 0.9rem;">
+        Todo tu semestre, organizado para ti ❤️🩷
+      </p>
+
+      <div class="horario-card">
+        <h3>Lunes</h3>
+        <p>7:00am - 11:27am - Color</p>
+        <p>11:30am - 14:27pm - Dibujo Vectorial</p>
+      </div>
+
+      <div class="horario-card">
+        <h3>Martes</h3>
+        <p>7:00am - 8:27am - H. para el emprendimiento</p>
+        <p>8:30 - 9:57 - Libre</p>
+        <p>10:00am - 11:27am - Antropologia</p>
+        <p>11:30am - 14:27pm - Fundamentos del diseño</p>
+        <p>14:30pm - 15:27pm - Ingles Inter: B </p>
+      </div>
+
+      <div class="horario-card">
+        <h3>Miercoles</h3>
+        <p>7:00am - 11:27am - Fotografia</p>
+      </div>
+
+      <div class="horario-card">
+        <h3>Jueves</h3>
+        <p>7:00am - 9:57am - Dibujo Analitico</p>
+        <p>10:00am - 11:27am - Antropologia</p>
+        <p>11:30am - 14:27pm - Fundamentos del diseño</p>
+        <p>14:30pm - 15:57pm - Ingles Inter: B </p>
+      </div>
+
+      <div class="horario-card">
+        <h3>Viernes</h3>
+        <p>8:30am - 11:27am - Dibujo Analitico</p>
+      </div>
+
+    </section>
+
+        <!-- Tareas code -->
+<section id="tareas" style="display:none;">
+  <h2>Mis tareas</h2>
+
+  <div class="tareas-inputs">
+    <input
+      type="text"
+      id="tareaInput"
+      placeholder="Escribe la tarea…"
+    />
+
+    <select id="materiaSelect">
+      <option value="General">General</option>
+      <option value="Color">Color</option>
+      <option value="Dibujo Vectorial">Dibujo Vectorial</option>
+      <option value="Fotografía">Fotografía</option>
+      <option value="Antropología">Antropología</option>
+      <option value="Fundamentos del Diseño">Fundamentos del Diseño</option>
+      <option value="Inglés">Inglés</option>
+      <option value="H. para el emprendimiento">H. para el emprendimiento</option>
+    </select>
+
+    <input type="date" id="fechaEntrega" />
+
+    <button id="agregarTarea">Agregar</button>
+  </div>
+
+  <div id="listaTareas" class="tareas-lista"></div>
+</section>
+
+<!-- MUSIC BAR -->
+
+
+
+        <!--Aura code
+<section id="aura" style="display:none;">
+  <h2>Aura</h2>
+
+  <div class="aura-chat" id="auraChat"></div>
+
+  <div class="aura-input">
+    <input type="text" id="auraInput" placeholder="Escribe aquí…" />
+    <button id="auraSend">➤</button>
+  </div>
+</section> -->
+
+
+
+
+  </main>
+      <!--Navegacion code-->
+  <nav class="app-nav">
+    <button data-section="inicio">🏠</button>
+    <button data-section="horario">📅</button>
+ <button data-section="tareas">✅</button>  
+    <button data-section="universidad" class="nav-logo">
+      <img src="assets/LogoA.png" alt="Anahuac">
+    </button>
+    <button data-section="almacenamiento">💾</button>
+<!--  <button data-section="aura">✨</button>  -->
+  </nav>
+</div>
+
+<div id="viewer" class="viewer" style="display:none;">
+  <button id="cerrarViewer" class="cerrar-viewer">✕</button>
+  <div id="viewerContenido"></div>
+</div>
+        <script src="js/app.js"></script>
+
+      </body>
+</html>
